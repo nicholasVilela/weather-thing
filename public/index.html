@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="/screen.css">
   </head>
   <body>
-    <h1 class='hello-world'></h1>
+    <h1>Weather Thing</h1>
+    <input type="text" id="search-field" placeholder="Enter a city or zip code..."/>
+    <button id="search-btn" onclick="getApiUrl()">search</button>
+  </br>
+    <h2 id="output"></h2>
     <script src="/main.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   </body>
 </html>
