@@ -10,10 +10,17 @@
   <body>
     <h1>Weather Thing</h1>
     <input type="text" id="search-field" placeholder="Enter a city or zip code..."/>
-    <button id="search-btn" onclick="getApiUrl()">search</button>
+    <button id="search-btn" onclick="getWeatherApiUrl()">search</button>
   </br>
     <h2 id="output"></h2>
     <script src="/main.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script>
+      function auto() {
+        const input = document.querySelector('#search-field')
+        const autocomplete = new google.maps.places.Autocomplete(input)
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClNJBdEu8CmkrhSOzdmRVy5M1UluZRZyo&libraries=places&callback=auto"></script>
   </body>
 </html>
